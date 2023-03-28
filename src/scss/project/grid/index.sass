@@ -1,0 +1,29 @@
+body
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  
+.not-scroll
+  overflow: hidden
+
+.page
+  flex: 1
+  
+.container
+  position: relative
+  --container-width: 100%
+  width: var(--container-width)
+  margin: 0 auto
+
+@media (min-width: 576px)
+  @import sm
+
+@media (min-width: 768px)
+  @import md
+
+@media (min-width: 992px)
+  @import lg
+
+@media (min-width: 1200px)
+  @import xl
