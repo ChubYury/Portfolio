@@ -1,16 +1,68 @@
-section.main-block-wrap
+section.portfolio-wrap
   .container
-    .main-block
-      h1.main-block_title Big block
-      //- exemplar connect image
-      div 
-        img(src="@img/cover.jpg", alt="")
-      p ___________________________________________________________________________
-      //- connect mixin
-      +cat()
-      //- div
-      //-     img(src="@img/txt_icon.svg", alt="")
-      p ___________________________________________________________________________
-      //- connect icon
-      div(class="icon-box")
-          img(src="./images/icons/icons.svg#allergy-food-label-5-svgrepo-com" class="svg-basic-connection-internet-2-svgrepo-com-dims")
+    .portfolio
+      .portfolio_skills
+        .contact
+          h2.contact_title Contacts
+          p.contact_phone
+            strong C: 
+            span +38-***-***-**-**
+          p.contact_email
+            strong E: 
+            span **********@gmail.com
+        .skills
+          h2.skills_title Tech Skills
+          ul.skills_list
+            li.skills_item HTML5
+            li.skills_item CSS3
+            li.skills_item GIT
+            li.skills_item Gulp
+            li.skills_item JavaScript
+            li.skills_item Vue.js
+            li.skills_item Node.js
+        .skills
+          h2.skills_title Soft Skills
+          ul.skills_list
+            li.skills_item Scrum
+            li.skills_item Agile
+            li.skills_item GTD
+            li.skills_item Teamwork
+      .portfolio_info
+        .photo_wrap
+          img.photo_body(src="@img/my-photo.jpg", alt="")
+
+        h3.portfolio_subtitle Front-End Developer
+        h1.portfolio_title-name Yury Chub
+        p.portfolio_descriprion Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              | Facere dolores, quisquam odio praesentium earum nobis ex! 
+                              | Commodi cum quisquam recusandae. Voluptatibus delectus, 
+                              | hic ullam obcaecati provident nostrum ut quisquam? Quae. 
+                              | Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                              | Soluta delectus nobis earum vero itaque quisquam, fugit culpa 
+                              | commodi, ipsum laborum magnam libero id voluptas at voluptatum odio. 
+                              | Itaque, dicta iusto!
+        .projects
+          h2.projects_title Projects
+          ul.projects_list
+            li.projects_item
+              span.projects_item-num 1.
+              a.prpjects_item-link https://hellen.p.goit.global/
+              span.projects_item-decor __________________________
+              span.projects_item-technology [ HTML5, CSS3 ]
+        .experiences
+          h2.experiences_title Work Experience
+          ul.experiences_list
+            li.experience
+              h4.experience_title Front-End Developer 
+                span.experience_title.experience_title--color Freelance
+              p.experience_date September 2019 - up to now   |   Country
+              ul.experience_list
+                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                 | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .educations
+          h2.educations_title Education
+          ul.educations_list
+            li.education
+              h2.education_title National University of Management
+              p.education_subtitle Management
+              p.education_date September 2009 - June 2014   |   Country
