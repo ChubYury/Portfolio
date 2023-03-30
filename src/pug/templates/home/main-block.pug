@@ -1,15 +1,84 @@
 section.portfolio-wrap
   .container
     .portfolio
-      .portfolio_skills
+      .portfolio_info
+        .portfolio-photo_wrap
+          img.portfolio-photo_body(src="@img/my-photo.jpg", alt="")
+
+        h3.portfolio_subtitle Front-End Developer
+        h1.portfolio_title Yury Chub
+        p.portfolio_description Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              | Facere dolores, quisquam odio praesentium earum nobis ex! 
+                              | Commodi cum quisquam recusandae. Voluptatibus delectus, 
+                              | hic ullam obcaecati provident nostrum ut quisquam? Quae. 
+                              | Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                              | Soluta delectus nobis earum vero itaque quisquam, fugit culpa 
+                              | commodi, ipsum laborum magnam libero id voluptas at voluptatum odio. 
+                              | Itaque, dicta iusto!
+        .projects
+          h2.projects_title Projects
+          ul.projects_list
+            li.projects_item
+              span.projects_item-num 1.
+              a.prpjects_item-link(href="https://hellen.p.goit.global/") https://hellen.p.goit.global/
+              span.projects_item-decor
+              span.projects_item-technology [ HTML5, CSS3 ]
+            li.projects_item
+              span.projects_item-num 2.
+              a.prpjects_item-link(href="https://cryptohub.p.goit.global/") https://cryptohub.p.goit.global/
+              span.projects_item-decor
+              span.projects_item-technology [ JavaScript ]
+            li.projects_item
+              span.projects_item-num 3.
+              a.prpjects_item-link(href="https://kidslike.p.goit.global/") https://kidslike.p.goit.global/
+              span.projects_item-decor
+              span.projects_item-technology [ React.js, Node.js ]
+        .experiences
+          h2.experiences_title Work Experience
+          ul.experiences_list
+            li.experience
+              h4.experience_title Front-End Developer 
+                span.experience_title.experience_title--color Freelance
+              p.experience_date September 2019 - up to now   |   Country
+              ul.experience_list
+                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                 | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                li.experience_item Risus commodo viverra maecenas. 
+                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. 
+            li.experience
+              h4.experience_title Manager 
+                span.experience_title.experience_title--color Banderogusak & Co.
+              p.experience_date March 2015 - October 2018   |   Country
+              ul.experience_list
+                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                 | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li.experience_item Quis ipsum suspendisse ultrices gravida.
+                li.experience_item Risus commodo viverra maecenas. 
+            li.experience
+              h4.experience_title Manager
+                span.experience_title.experience_title--color  BestUA Corp.
+              p.experience_date June 2014 - February 2015   |   Country
+              ul.experience_list
+                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                li.experience_item Quis ipsum suspendisse ultrices gravida.
+                li.experience_item Risus commodo viverra maecenas.
+        .educations
+          h2.educations_title Education
+          ul.educations_list
+            li.education
+              h2.education_title National University of Management
+              h3.education_subtitle Management
+              p.education_date September 2009 - June 2014   |   Country
+      aside.portfolio_skills
         .contact
           h2.contact_title Contacts
           p.contact_phone
             strong C: 
-            span +38-***-***-**-**
+            a(href="tel:+388888888888")  +38-888-888-88-88
           p.contact_email
             strong E: 
-            span **********@gmail.com
+            a(href="mailto:myemail@gmail.com") myemail@gmail.com
         .skills
           h2.skills_title Tech Skills
           ul.skills_list
@@ -27,42 +96,3 @@ section.portfolio-wrap
             li.skills_item Agile
             li.skills_item GTD
             li.skills_item Teamwork
-      .portfolio_info
-        .photo_wrap
-          img.photo_body(src="@img/my-photo.jpg", alt="")
-
-        h3.portfolio_subtitle Front-End Developer
-        h1.portfolio_title-name Yury Chub
-        p.portfolio_descriprion Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                              | Facere dolores, quisquam odio praesentium earum nobis ex! 
-                              | Commodi cum quisquam recusandae. Voluptatibus delectus, 
-                              | hic ullam obcaecati provident nostrum ut quisquam? Quae. 
-                              | Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                              | Soluta delectus nobis earum vero itaque quisquam, fugit culpa 
-                              | commodi, ipsum laborum magnam libero id voluptas at voluptatum odio. 
-                              | Itaque, dicta iusto!
-        .projects
-          h2.projects_title Projects
-          ul.projects_list
-            li.projects_item
-              span.projects_item-num 1.
-              a.prpjects_item-link https://hellen.p.goit.global/
-              span.projects_item-decor __________________________
-              span.projects_item-technology [ HTML5, CSS3 ]
-        .experiences
-          h2.experiences_title Work Experience
-          ul.experiences_list
-            li.experience
-              h4.experience_title Front-End Developer 
-                span.experience_title.experience_title--color Freelance
-              p.experience_date September 2019 - up to now   |   Country
-              ul.experience_list
-                li.experience_item Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                 | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .educations
-          h2.educations_title Education
-          ul.educations_list
-            li.education
-              h2.education_title National University of Management
-              p.education_subtitle Management
-              p.education_date September 2009 - June 2014   |   Country
