@@ -1,7 +1,7 @@
 .portfolio-wrap
   padding: 40px 0
   background: var(--theme-color-base)
-  
+
 .portfolio
   display: flex
   flex-direction: column
@@ -15,12 +15,11 @@
       flex-direction: row
       padding: 0 10px 10px 10px
       background: var(--theme-bg-base)
-      // padding: 0 40px
     &info
       position: relative
       padding: 50px 10px 50px 15px
       background: #fff
-      flex-grow:1
+      flex-grow: 1
     &title
       width: 100%
       margin-bottom: 20px
@@ -52,15 +51,34 @@
   margin-bottom: 40px
   &_
     &title
-      margin-bottom: 8px
+      margin-bottom: 20px
     &item
       position: relative
-      display: flex
-    &item-num
-      display: inline-block
-      margin-right: 5px
+      text-indent: 2em
+      margin: 10px 0
+      &::before
+        position: absolute
+        content: '\25ba'
+        top: -3px
+        left: -25px
+        color: var(--text-color-link)
+    &item-title
       color: var(--text-color-title)
       font-weight: 700
+      font-size: 16px
+      line-height: 20px
+    &item-subtitle
+      font-size: 12px
+      font-weight: 400
+    &item-label
+      font-weight: 700
+    &item-link
+      font-weight: 600
+      font-size: 14px
+      line-height: 24px
+      &:link
+        color: var(--text-color-base)
+        text-decoration: none
     &item-decor
       flex: 1
       position: relative
@@ -79,7 +97,6 @@
   &_
     &title
       margin-bottom: 8px
-      // color: var(--text-color-title)
       &--
         &color
           color: var(--text-color-link)
@@ -99,11 +116,13 @@
         line-height: 0
 
 .educations
+  margin-bottom: 40px
   &_
     &title
       margin-bottom: 10px
 
 .education
+  margin: 20px 0
   &_
     &title
       margin-bottom: 10px
@@ -127,9 +146,14 @@
       margin-right: 10px
       color: var(--text-color-title)
       font-weight: 700
+    &item
+      margin-bottom: 5px
 
 .skills
-  margin-top: 44px
+  margin-bottom: 44px
+  font-weight: 600
+  font-size: 14px
+  line-height: 24px
   &_
     &title
       margin-bottom: 8px
@@ -144,3 +168,16 @@
         font-size: 30px
         line-height: 0
         color: var(--text-color-link)
+
+.email-dims
+  height: 30px
+  margin-right: 10px
+.phone-dims
+  height: 30px
+  margin-right: 10px
+.git-dims
+  height: 30px
+  margin-right: 10px
+.telega-dims
+  height: 30px
+  margin-right: 10px
