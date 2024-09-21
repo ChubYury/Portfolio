@@ -1,5 +1,4 @@
-import * as flsFunctions from "./modules/webpTest.js"
-
+import * as flsFunctions from "./modules/webpTest.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   flsFunctions.isWebp();
