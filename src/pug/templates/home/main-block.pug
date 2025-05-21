@@ -2,6 +2,7 @@ section.portfolio-wrap
   .container
     .portfolio
       .portfolio_info
+        a.portfolio_download(href="files/resume_Yuri_Chub.pdf" download) Download Resume
         .portfolio-photo_wrap
           img.portfolio-photo_body(src="@img/my-photo.jpg", alt="")
 
@@ -40,6 +41,12 @@ section.portfolio-wrap
               h3.education_subtitle Junior front-end developer
               p.education_date Sep 2021 – Feb 2022   |   Ukraine
         .skills
+          h2.skills_title Languages
+          ul.skills_list
+            li.skills_item Ukrainian (native)
+            li.skills_item Russian (native)
+            li.skills_item English (B1)
+        .skills
           h2.skills_title Tech Skills
           ul.skills_list
             li.skills_item HTML5 (Pug, BEM)
@@ -51,8 +58,31 @@ section.portfolio-wrap
         .projects
           h2.projects_title Projects
           ul.projects_list
-            h3.projects_list-title Course
+            h3.projects_list-title Pet
             li.projects_item
+              h4.projects_item-title Stationery shop  
+                span.projects_item-subtitle [HTML5, CSS3, Sass]
+              p.projects_item-content 
+                a.projects_item-link(href="https://chubyury.github.io/stationery/") Sites
+                span  \ 
+                a.projects_item-link(href="https://github.com/ChubYury/stationery/tree/dev") Repository
+            li.projects_item
+              h4.projects_item-title Coach app  
+                span.projects_item-subtitle [HTML5, CSS3, Vue, Express, MongoDB]
+              p.projects_item-content 
+                a.projects_item-link(href="https://vlp-umber.vercel.app/coaches") Sites
+                span  \ 
+                a.projects_item-link(href="https://github.com/ChubYury/VLP") Repository Vue
+                span  \ 
+                a.projects_item-link(href="https://github.com/ChubYury/vueServer") Repository Express
+            li.projects_item
+              h4.projects_item-title My tools  
+                span.projects_item-subtitle [Js, Gulp]
+              p.projects_item-content 
+                a.projects_item-link(href="https://github.com/ChubYury/templateGulp") Repository
+          ul.projects_list
+            h3.projects_list-title Course
+            //- li.projects_item
               h4.projects_item-title Wc_Mirage  
                 span.projects_item-subtitle [HTML5, CSS3, Sass]
               p.projects_item-content
@@ -80,46 +110,26 @@ section.portfolio-wrap
                 a.projects_item-link(href="https://chubyury.github.io/flava/server/markup/templates/") Sites
                 span  \ 
                 a.projects_item-link(href="https://github.com/ChubYury/flava") Repository
-          ul.projects_list
-            h3.projects_list-title Pet
-            li.projects_item
-              h4.projects_item-title Stationery shop  
-                span.projects_item-subtitle [HTML5, CSS3, Sass]
-              p.projects_item-content 
-                a.projects_item-link(href="https://github.com/ChubYury/stationery/tree/dev") Sites
-                span  \ 
-                a.projects_item-link(href="https://github.com/ChubYury/Web_course") Repository
-            li.projects_item
-              h4.projects_item-title Coach app  
-                span.projects_item-subtitle [HTML5, CSS3, Vue, Express, MongoDB]
-              p.projects_item-content 
-                a.projects_item-link(href="https://vlp-umber.vercel.app/coaches") Sites
-                span  \ 
-                a.projects_item-link(href="https://github.com/ChubYury/VLP") Repository Vue
-                span  \ 
-                a.projects_item-link(href="https://github.com/ChubYury/vueServer") Repository Express
-            li.projects_item
-              h4.projects_item-title My tools  
-                span.projects_item-subtitle [Js, Gulp]
-              p.projects_item-content 
-                a.projects_item-link(href="https://github.com/ChubYury/templateGulp") Repository
-
       aside.portfolio_skills
         .contact
           h2.contact_title Contacts
           p.contact_item
-            span.icon-box
-              img.phone-dims(src="./images/icons/icons.svg#phone")
-            a(href="tel:+380990895767") Phone
+            span.icon_box
+              img.icon_img.email-dims(src="./images/icons/icons.svg#email")
+            a.contact_item-name(href="mailto:yurichubwork@gmail.com") Email
           p.contact_item
-            span.icon-box
-              img.email-dims(src="./images/icons/icons.svg#email")
-            a(href="mailto:yurichubwork@gmail.com") Email
+            span.icon_box
+              img.icon_img.phone-dims(src="./images/icons/icons.svg#phone")
+            a.contact_item-name(href="tel:+380990895767") Phone
           p.contact_item
-            span.icon-box
-              img.git-dims(src="./images/icons/icons.svg#git")
-            a(href="https://github.com/ChubYury") GitHub
+            span.icon_box
+              img.icon_img.telega-dims(src="./images/icons/icons.svg#telega")
+            a.contact_item-name(href="https://t.me/+380990895767") Telegram
           p.contact_item
-            span.icon-box
-              img.telega-dims(src="./images/icons/icons.svg#telega")
-            a(href="https://t.me/+380990895767") Telegram
+            span.icon_box
+              img.icon_img.telega-dims(src="./images/icons/icons.svg#ldin")
+            a.contact_item-name(href="#") LinkedIn
+          p.contact_item
+            span.icon_box
+              img.icon_img.git-dims(src="./images/icons/icons.svg#git")
+            a.contact_item-name(href="https://github.com/ChubYury") GitHub

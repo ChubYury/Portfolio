@@ -20,9 +20,31 @@
       padding: 50px 10px 50px 15px
       background: #fff
       flex-grow: 1
+    &download
+      position: absolute
+      top: 434px
+      left: 50%
+      transform: translateX(-50%)
+      color: var(--text-color-title)
+      font-weight: 700
+      text-align: center
+      text-decoration: none
+      &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 2px
+        left: 0
+        bottom: -2px
+        background: var(--text-color-title)
+        transform: rotateY(-90deg)
+        transition: .3s
+      &:hover
+        &::before
+          transform: rotateY(0deg)
     &title
       width: 100%
-      margin-bottom: 20px
+      margin-bottom: 40px
       font-weight: 700
       font-size: 45px
       line-height: 55px
@@ -135,12 +157,19 @@
       line-height: 15px
 
 //****************************************************
+
 .contact
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  gap: 10px
   width: 100%
   text-align: center
   margin-top: 20px
+
   &_
     &title
+      width: 100%
       margin-bottom: 8px
     &item-title
       margin-right: 10px
@@ -148,6 +177,25 @@
       font-weight: 700
     &item
       margin-bottom: 5px
+    &item-name
+      position: relative
+      color: var(--text-color-title)
+      text-decoration: none
+      &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 1px
+        left: 0
+        bottom: -2px
+        background: var(--text-color-title)
+        transform-origin: 0 50%
+        transform: rotateY(-90deg)
+        transition: .3s
+      &:hover
+        &::before
+          transform: rotateY(0deg)
+      
 
 .skills
   margin-bottom: 44px
@@ -169,15 +217,3 @@
         line-height: 0
         color: var(--text-color-link)
 
-.email-dims
-  height: 30px
-  margin-right: 10px
-.phone-dims
-  height: 30px
-  margin-right: 10px
-.git-dims
-  height: 30px
-  margin-right: 10px
-.telega-dims
-  height: 30px
-  margin-right: 10px
