@@ -1,132 +1,338 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0"/>
-    <meta name="description" content="Free Web tutorials"/>
-    <meta name="keywords" content="HTML, CSS, JavaScript, Vue"/>
+    <meta name="description" content="Front-end developer: websites, web interfaces, web animations, responsive markup."/>
+    <meta name="keywords" content="front-end developer, HTML, CSS, JavaScript, TypeScript, Vue, Laravel"/>
+    <meta name="author" content="Yury Chub"/>
     <link rel="icon" type="image/png" sizes="192x192" href="img/favicon.png"/>
-    <title>My portfolio</title>
-    <link rel="stylesheet" type="text/css" media="all" href="./css/style.min.css?_v=20250521100658"/>
-    <script type="text/javascript" src="./js/app.min.js?_v=20250521100658" defer="defer"></script>
+    <link rel="canonical" href="https://chubyury.github.io/Portfolio/"/>
+    <title>Yury Chub — Front-End Developer</title>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:site_name" content="Yury Chub"/>
+    <meta property="og:title" content="Yury Chub — Front-End Developer"/>
+    <meta property="og:description" content="Front-end developer: websites, web interfaces, web animations, responsive markup."/>
+    <meta property="og:url" content="https://chubyury.github.io/Portfolio/"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:image" content="https://chubyury.github.io/Portfolio/img/og-image.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:alt" content="Yury Chub, Front-End Developer"/>
+    <meta property="profile:first_name" content="Yury"/>
+    <meta property="profile:last_name" content="Chub"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Yury Chub — Front-End Developer"/>
+    <meta name="twitter:description" content="Front-end developer: websites, web interfaces, web animations, responsive markup."/>
+    <meta name="twitter:image" content="https://chubyury.github.io/Portfolio/img/og-image.jpg"/>
+    <meta name="twitter:image:alt" content="Yury Chub, Front-End Developer"/>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yury Chub",
+        "jobTitle": "Front-End Developer",
+        "description": "Front-end developer: websites, web interfaces, web animations, responsive markup.",
+        "url": "https://chubyury.github.io/Portfolio/",
+        "image": "https://chubyury.github.io/Portfolio/img/og-image.jpg",
+        "email": "mailto:yurichubwork@gmail.com",
+        "telephone": "+380990895767",
+        "knowsAbout": ["HTML", "CSS", "Sass", "Tailwind CSS", "JavaScript", "TypeScript", "Vue.js", "PHP", "Laravel", "Python", "Django", "Node.js", "Docker", "Git"],
+        "knowsLanguage": [
+          { "@type": "Language", "name": "Ukrainian" },
+          { "@type": "Language", "name": "Russian" },
+          { "@type": "Language", "name": "English" }
+        ],
+        "sameAs": [
+          "https://github.com/ChubYury",
+          "https://gitlab.com/ChubYury",
+          "https://www.linkedin.com/in/yurii-chub-21010b337/"
+        ]
+      }
+    </script>
+    <script>
+      (function () {
+        var root = document.documentElement, saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved !== 'light' && saved !== 'dark') {
+          saved = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        root.setAttribute('data-theme', saved);
+      })();
+    </script>
+    <link rel="stylesheet" type="text/css" media="all" href="./css/style.min.css?_v=20260813145651"/>
+    <script type="text/javascript" src="./js/app.min.js?_v=20260813145651" defer="defer"></script>
   </head>
   <body>
-    <main class="page"> 
-      <section class="portfolio-wrap">
-        <div class="container">
-          <div class="portfolio">
-            <div class="portfolio_info"><a class="portfolio_download" href="files/resume_Yuri_Chub.pdf" download="download">Download Resume</a>
-              <div class="portfolio-photo_wrap"><picture><source srcset="img/my-photo.webp" type="image/webp"><img class="portfolio-photo_body" src="img/my-photo.jpg" alt=""/></picture></div>
-              <h3 class="portfolio_subtitle">Front-End Developer</h3>
-              <h1 class="portfolio_title">Yury Chub</h1>
-              <p class="portfolio_description">
-                Hi, I am a frontend developer, and I create websites, web interfaces, web animations and adaptation of resources for different devices. 
-                When working on a project or task, I break the work into stages to 
-                constantly control the process and get the result in the most efficient
-                way. In my work, I try to take into account the wishes of the team. 
-                I love interesting and challenging projects that push me to self-development.
-              </p>
-              <div class="educations">
-                <h2 class="educations_title">Education and experience:</h2>
-                <ul class="educations_list">
-                  <li class="education">
-                    <h2 class="education_title">Azov Regional Institute of Management</h2>
-                    <h3 class="education_subtitle">Economic cybernetics</h3>
-                    <p class="education_date">2007 – 2011   |   Ukraine</p>
-                  </li>
-                  <li class="education">
-                    <h2 class="education_title">Azov Cable Company</h2>
-                    <h3 class="education_subtitle">Database operator</h3>
-                    <p class="education_date">2011 – 2012   |   Ukraine</p>
-                  </li>
-                  <li class="education">
-                    <h2 class="education_title">Internet provider "Intelcom"</h2>
-                    <h3 class="education_subtitle">Internet network installer</h3>
-                    <p class="education_date">2012 – 2017   |   Ukraine</p>
-                  </li>
-                  <li class="education">
-                    <h2 class="education_title">Ukrainian Scientific Research Institute of Cable Industry</h2>
-                    <h3 class="education_subtitle">Electrical test technician</h3>
-                    <p class="education_date">2017 – 2021   |   Ukraine</p>
-                  </li>
-                  <li class="education">
-                    <h2 class="education_title">HTML/CSS + JS courses</h2>
-                    <p class="education_date">Aug – Sep 2021   |   Ukraine</p>
-                  </li>
-                  <li class="education">
-                    <h2 class="education_title">Internship at the company "Webcase"</h2>
-                    <h3 class="education_subtitle">Junior front-end developer</h3>
-                    <p class="education_date">Sep 2021 – Feb 2022   |   Ukraine</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="skills">
-                <h2 class="skills_title">Languages</h2>
-                <ul class="skills_list">
-                  <li class="skills_item">Ukrainian (native)</li>
-                  <li class="skills_item">Russian (native)</li>
-                  <li class="skills_item">English (B1)</li>
-                </ul>
-              </div>
-              <div class="skills">
-                <h2 class="skills_title">Tech Skills</h2>
-                <ul class="skills_list">
-                  <li class="skills_item">HTML5 (Pug, BEM)</li>
-                  <li class="skills_item">CSS3 (SASS, SCSS)</li>
-                  <li class="skills_item">JavaScript (native, jQuery, Ajax, Vue, Express)</li>
-                  <li class="skills_item">MongoDb</li>
-                  <li class="skills_item">GIT</li>
-                  <li class="skills_item">Gulp</li>
-                </ul>
-              </div>
-              <div class="projects">
-                <h2 class="projects_title">Projects</h2>
-                <ul class="projects_list">
-                  <h3 class="projects_list-title">Pet</h3>
-                  <li class="projects_item">
-                    <h4 class="projects_item-title">Stationery shop  <span class="projects_item-subtitle">[HTML5, CSS3, Sass]</span></h4>
-                    <p class="projects_item-content"> <a class="projects_item-link" href="https://chubyury.github.io/stationery/">Sites</a><span> \ </span><a class="projects_item-link" href="https://github.com/ChubYury/stationery/tree/dev">Repository</a></p>
-                  </li>
-                  <li class="projects_item">
-                    <h4 class="projects_item-title">Coach app  <span class="projects_item-subtitle">[HTML5, CSS3, Vue, Express, MongoDB]</span></h4>
-                    <p class="projects_item-content"> <a class="projects_item-link" href="https://vlp-umber.vercel.app/coaches">Sites</a><span> \ </span><a class="projects_item-link" href="https://github.com/ChubYury/VLP">Repository Vue</a><span> \ </span><a class="projects_item-link" href="https://github.com/ChubYury/vueServer">Repository Express</a></p>
-                  </li>
-                  <li class="projects_item">
-                    <h4 class="projects_item-title">My tools  <span class="projects_item-subtitle">[Js, Gulp]</span></h4>
-                    <p class="projects_item-content"> <a class="projects_item-link" href="https://github.com/ChubYury/templateGulp">Repository</a></p>
-                  </li>
-                </ul>
-                <ul class="projects_list">
-                  <h3 class="projects_list-title">Course</h3>
-                  <li class="projects_item">
-                    <h4 class="projects_item-title">Wc__trevland  <span class="projects_item-subtitle">[HTML5, CSS3, Sass]</span></h4>
-                    <p class="projects_item-content"> <a class="projects_item-link" href="https://chubyury.github.io/Wc__trevland/server/markup/templates/">Sites</a><span> \ </span><a class="projects_item-link" href="https://github.com/ChubYury/Wc__trevland">Repository</a></p>
-                  </li>
-                  <li class="projects_item">
-                    <h4 class="projects_item-title">Wc_Ycapsula  <span class="projects_item-subtitle">[HTML5, CSS3, Sass]</span></h4>
-                    <p class="projects_item-content"> <a class="projects_item-link" href="https://chubyury.github.io/Wc_Ycapsula/server/markup/templates/">Sites</a><span> \ </span><a class="projects_item-link" href="https://github.com/ChubYury/Wc_Ycapsula">Repository</a></p>
-                  </li>
-                  <li class="projects_item">
-                    <h4 class="projects_item-title">Flava  <span class="projects_item-subtitle">[HTML5, CSS3, Sass, Js]</span></h4>
-                    <p class="projects_item-content"> <a class="projects_item-link" href="https://chubyury.github.io/flava/server/markup/templates/">Sites</a><span> \ </span><a class="projects_item-link" href="https://github.com/ChubYury/flava">Repository</a></p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <aside class="portfolio_skills">
-              <div class="contact">
-                <h2 class="contact_title">Contacts</h2>
-                <p class="contact_item"><span class="icon_box"><img class="icon_img email-dims" src="./images/icons/icons.svg#email"/></span><a class="contact_item-name" href="mailto:yurichubwork@gmail.com">Email</a></p>
-                <p class="contact_item"><span class="icon_box"><img class="icon_img phone-dims" src="./images/icons/icons.svg#phone"/></span><a class="contact_item-name" href="tel:+380990895767">Phone</a></p>
-                <p class="contact_item"><span class="icon_box"><img class="icon_img telega-dims" src="./images/icons/icons.svg#telega"/></span><a class="contact_item-name" href="https://t.me/+380990895767">Telegram</a></p>
-                <p class="contact_item"><span class="icon_box"><img class="icon_img telega-dims" src="./images/icons/icons.svg#ldin"/></span><a class="contact_item-name" href="#">LinkedIn</a></p>
-                <p class="contact_item"><span class="icon_box"><img class="icon_img git-dims" src="./images/icons/icons.svg#git"/></span><a class="contact_item-name" href="https://github.com/ChubYury">GitHub</a></p>
-              </div>
-            </aside>
+    <div class="container">
+      <header class="header">
+        <div class="nav">
+          <div class="nav_links"><a class="nav_link nav_link--active" href="#about">About</a><a class="nav_link" href="#skills">Skills</a><a class="nav_link" href="#projects">Projects</a><a class="nav_link" href="#experience">Experience</a><a class="nav_link" href="#contact">Contacts</a>
+          </div>
+          <button class="burger" type="button" data-menu-toggle="data-menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span class="burger_bar"></span><span class="burger_bar"></span><span class="burger_bar"></span></button>
+          <div class="nav_theme">
+            <button class="nav_theme-btn" type="button" data-set-theme="dark" aria-pressed="true" aria-label="Dark theme" title="Dark theme"></button>
+            <button class="nav_theme-btn" type="button" data-set-theme="light" aria-pressed="false" aria-label="Light theme" title="Light theme"></button>
           </div>
         </div>
-      </section>
-    </main>
+        <nav class="menu" id="menu" hidden="hidden"><a class="menu_link menu_link--active" href="#about">About</a><a class="menu_link" href="#skills">Skills</a><a class="menu_link" href="#projects">Projects</a><a class="menu_link" href="#experience">Experience</a><a class="menu_link" href="#contact">Contacts</a>
+        </nav>
+      </header>
+      <main class="page layout">
+        <aside class="side">
+          <div class="side_ident"><picture><source srcset="img/my-photo.webp" type="image/webp"><img class="side_photo" src="img/my-photo.jpg" alt="Yury Chub" width="288" height="210"/></picture>
+            <div>
+              <div class="side_name">Yury Chub</div>
+              <div class="side_role">Front-End Developer</div>
+            </div>
+          </div>
+          <div class="side_chips"><span class="side_chip">HTML5</span><span class="side_chip">CSS3 / Sass</span><span class="side_chip">Tailwind</span><span class="side_chip">JavaScript</span><span class="side_chip">TypeScript</span><span class="side_chip">Vue 3</span><span class="side_chip">PHP / Laravel</span><span class="side_chip">Python / Django</span><span class="side_chip">Node.js</span><span class="side_chip">SQL / NoSQL</span><span class="side_chip">Docker</span><span class="side_chip">GIT</span>
+          </div>
+          <div class="contacts"><a class="contacts_item" href="mailto:yurichubwork@gmail.com"><span class="contacts_icon"><img class="icon" src="./images/icons/icons.svg#email" alt=""/></span><span><span class="contacts_label">E-mail</span><span class="contacts_value">yurichubwork@gmail.com</span></span></a><a class="contacts_item" href="https://github.com/ChubYury"><span class="contacts_icon"><img class="icon" src="./images/icons/icons.svg#git" alt=""/></span><span><span class="contacts_label">GitHub</span><span class="contacts_value">github.com/ChubYury</span></span></a><a class="contacts_item" href="https://gitlab.com/ChubYury"><span class="contacts_icon"><img class="icon" src="./images/icons/icons.svg#gitlab" alt=""/></span><span><span class="contacts_label">GitLab</span><span class="contacts_value">gitlab.com/ChubYury</span></span></a><a class="contacts_item" href="https://t.me/+380990895767"><span class="contacts_icon"><img class="icon" src="./images/icons/icons.svg#telega" alt=""/></span><span><span class="contacts_label">Telegram</span><span class="contacts_value">t.me/+380990895767</span></span></a><a class="contacts_item" href="https://www.linkedin.com/in/yurii-chub-21010b337/"><span class="contacts_icon"><img class="icon" src="./images/icons/icons.svg#ldin" alt=""/></span><span><span class="contacts_label">LinkedIn</span><span class="contacts_value">linkedin.com/in/yurii-chub</span></span></a><a class="contacts_item" href="tel:+380990895767"><span class="contacts_icon"><img class="icon" src="./images/icons/icons.svg#phone" alt=""/></span><span><span class="contacts_label">Phone</span><span class="contacts_value">+38 099 089 57 67</span></span></a>
+          </div>
+          <div class="side_actions"><a class="btn side_resume" href="files/resume_Yuri_Chub.pdf" download="download">Download Resume</a>
+            <div class="share">
+              <button class="share_btn" type="button" data-share="data-share" aria-expanded="false" aria-controls="share-menu" aria-label="Share this page" title="Share this page"><img class="icon" src="./images/icons/icons.svg#share" alt=""/></button>
+              <div class="share_menu" id="share-menu" hidden="hidden">
+                <button class="share_item" type="button" data-share-copy="data-share-copy">Copy link</button><a class="share_item" data-share-net="telegram" href="#" target="_blank" rel="noopener">Telegram</a><a class="share_item" data-share-net="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a><a class="share_item" data-share-net="email" href="#">E-mail</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="layout_content">
+          <section class="section section--top" id="about">
+            <div class="kicker">About me</div>
+            <h1 class="about_title">Front-end developer.</h1>
+            <p class="about_text">
+              Hi, I am a frontend developer, and I create websites, web interfaces,
+               web animations and adaptation of resources for different devices.
+               When working on a project or task, I break the work into stages to
+               constantly control the process and get the result in the most efficient
+               way. In my work, I try to take into account the wishes of the team.
+               I love interesting and challenging projects that push me to self-development.
+            </p>
+          </section>
+          <section class="section" id="skills">
+            <div class="section_head">
+              <h2 class="section_title">Tech skills</h2><span class="section_dash"></span>
+            </div>
+            <div class="cards cards--3">
+              <div class="card">
+                <div class="card_title">HTML5</div>
+                <div class="card_meta">Pug, Blade, Django Templates, BEM</div>
+              </div>
+              <div class="card">
+                <div class="card_title">CSS3</div>
+                <div class="card_meta">Sass, SCSS, Tailwind CSS, shadcn/ui</div>
+              </div>
+              <div class="card">
+                <div class="card_title">JavaScript</div>
+                <div class="card_meta">ES6+, jQuery, Ajax</div>
+              </div>
+              <div class="card">
+                <div class="card_title">TypeScript</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Vue 3</div>
+                <div class="card_meta">Composition API, Vue Router, Vuex, Inertia.js, SSR, VueUse</div>
+              </div>
+              <div class="card">
+                <div class="card_title">PHP</div>
+                <div class="card_meta">Laravel, Filament</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Python</div>
+                <div class="card_meta">Django</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Node.js</div>
+                <div class="card_meta">Express</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Databases</div>
+                <div class="card_meta">PostgreSQL, MySQL / MariaDB, MongoDB</div>
+              </div>
+              <div class="card">
+                <div class="card_title">DevOps</div>
+                <div class="card_meta">Docker, Docker Compose</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Testing</div>
+                <div class="card_meta">Pest, PHPUnit</div>
+              </div>
+              <div class="card">
+                <div class="card_title">AI / LLM</div>
+                <div class="card_meta">OpenAI API, MCP, agent orchestration</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Tools</div>
+                <div class="card_meta">Git, Vite, Gulp, ESLint, Prettier</div>
+              </div>
+            </div>
+          </section>
+          <section class="section section--last" id="languages">
+            <div class="section_head">
+              <h2 class="section_title">Languages</h2><span class="section_dash"></span>
+            </div>
+            <div class="cards cards--3">
+              <div class="card">
+                <div class="card_title">Ukrainian</div>
+                <div class="card_meta">native</div>
+              </div>
+              <div class="card">
+                <div class="card_title">Russian</div>
+                <div class="card_meta">native</div>
+              </div>
+              <div class="card">
+                <div class="card_title">English</div>
+                <div class="card_meta">B1</div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="experience">
+            <div class="section_head">
+              <h2 class="section_title">Education and experience</h2><span class="section_dash"></span>
+            </div>
+            <div class="cards cards--2">
+              <div class="card card--edu">
+                <div class="card_period">2007 – 2011 · Ukraine</div>
+                <div class="card_title">Azov Regional Institute of Management</div>
+                <div class="card_meta">Economic cybernetics</div>
+              </div>
+              <div class="card card--edu">
+                <div class="card_period">2011 – 2012 · Ukraine</div>
+                <div class="card_title">Azov Cable Company</div>
+                <div class="card_meta">Database operator</div>
+              </div>
+              <div class="card card--edu">
+                <div class="card_period">2012 – 2017 · Ukraine</div>
+                <div class="card_title">Internet provider &quot;Intelcom&quot;</div>
+                <div class="card_meta">Internet network installer</div>
+              </div>
+              <div class="card card--edu">
+                <div class="card_period">2017 – 2021 · Ukraine</div>
+                <div class="card_title">Ukrainian Scientific Research Institute of Cable Industry</div>
+                <div class="card_meta">Electrical test technician</div>
+              </div>
+              <div class="card card--edu">
+                <div class="card_period">Aug – Sep 2021 · Ukraine</div>
+                <div class="card_title">HTML/CSS + JS courses</div>
+              </div>
+              <div class="card card--edu">
+                <div class="card_period">Sep 2021 – Feb 2022 · Ukraine</div>
+                <div class="card_title">Internship at the company &quot;Webcase&quot;</div>
+                <div class="card_meta">Junior front-end developer</div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="projects">
+            <div class="section_head">
+              <h2 class="section_title">Projects</h2><span class="section_dash"></span>
+            </div>
+            <div class="projects_group-title">Commercial</div>
+            <div class="projects_group">
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">Renoptik CMS</div>
+                    <div class="project_stack">Laravel, Inertia, Vue 3, TypeScript, Tailwind, PostgreSQL, Docker</div>
+                  </div>
+                  <div class="project_actions"><a class="project_link" href="https://renoptik.fsm.lv/">Sites ↗</a><span class="project_label">Private repository</span>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-renoptik">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-renoptik" hidden="hidden">E-commerce platform for a Swedish optics retailer. The storefront runs on Inertia and Vue 3 with server-side rendering for search visibility: catalog and product pages, a lens ordering flow, cart, favourites and customer profiles. The frontend is split into shop and admin domains that share typed composables for cart, search and translations, and the same codebase serves a custom admin panel for content, media and lens pricing.</div>
+              </div>
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">TripBox</div>
+                    <div class="project_stack">Django, Python, JavaScript, Sass, PostgreSQL, Docker</div>
+                  </div>
+                  <div class="project_actions"><a class="project_link" href="https://tripbox.ge/">Sites ↗</a><span class="project_label">Private repository</span>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-tripbox">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-tripbox" hidden="hidden">Car rental marketplace operating in Georgia. My work is concentrated on the frontend of the public site and the partner cabinet: fleet and booking screens, host onboarding, personal host websites, blog and SEO pages. Django templates are paired with Sass and vanilla JavaScript, backed by PostgreSQL, Redis job queues, an AI assistant, GPS tracking and a Telegram bot, deployed with Docker behind Nginx.</div>
+              </div>
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">Marvli Wallet</div>
+                    <div class="project_stack">Laravel, Inertia, Vue 3, Tailwind, shadcn-vue, MariaDB, Docker</div>
+                  </div>
+                  <div class="project_actions"><a class="project_link" href="https://stage.marvli.com">Sites ↗</a><span class="project_label">Private repository</span>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-marvli">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-marvli" hidden="hidden">Multi-currency wallet cabinet for a fintech product. The client area is built on Inertia and Vue 3 with Tailwind and shadcn-vue components: accounts and balances, transfers, counterparties and beneficiaries, plus KYC verification and business questionnaires. Administration runs on a Filament back office with activity logging, and the application is served through Laravel Octane with Reverb for real-time updates.</div>
+              </div>
+            </div>
+            <div class="projects_group-title">Tools</div>
+            <div class="projects_group">
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">Builder</div>
+                    <div class="project_stack">Js, Gulp</div>
+                  </div>
+                  <div class="project_actions"><a class="project_link project_link--muted" href="https://github.com/ChubYury/templateGulp">Repository ↗</a>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-builder">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-builder" hidden="hidden">My own Gulp starter for static sites, and the build this portfolio itself runs on. It compiles Pug and Sass, assembles SVG sprites, optimises images, generates web fonts from TTF, groups media queries and stamps assets with version numbers for cache busting.</div>
+              </div>
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">LLM Lab</div>
+                    <div class="project_stack">LLM agents, MCP, prompt engineering</div>
+                  </div>
+                  <div class="project_actions"><span class="project_label">Private repository</span>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-llmlab">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-llmlab" hidden="hidden">A personal laboratory for researching and building LLM skills and agents. It holds a library of reusable skills and agent definitions, MCP integrations and a fixed experiment protocol — hypothesis, method, result, conclusions — along with orchestration setups written for the Marvli, Renoptik and TripBox projects.</div>
+              </div>
+            </div>
+            <div class="projects_group-title">Pets</div>
+            <div class="projects_group">
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">Stationery shop</div>
+                    <div class="project_stack">HTML5, CSS3, Sass</div>
+                  </div>
+                  <div class="project_actions"><a class="project_link" href="https://chubyury.github.io/stationery/">Sites ↗</a><a class="project_link project_link--muted" href="https://github.com/ChubYury/stationery/tree/dev">Repository ↗</a>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-stationery">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-stationery" hidden="hidden">A multi-page stationery store layout: twelve product pages, a catalog and a cart. Built from Pug templates with BEM naming and Sass, it was an exercise in keeping markup and styles consistent across many near-identical pages without duplicating code.</div>
+              </div>
+              <div class="project">
+                <div class="project_row">
+                  <div>
+                    <div class="project_title">Coach app</div>
+                    <div class="project_stack">HTML5, CSS3, Vue, Express, MongoDB</div>
+                  </div>
+                  <div class="project_actions"><a class="project_link" href="https://vlp-umber.vercel.app/coaches">Sites ↗</a><a class="project_link project_link--muted" href="https://github.com/ChubYury/VLP">Repository Vue ↗</a><a class="project_link project_link--muted" href="https://github.com/ChubYury/vueServer">Repository Express ↗</a>
+                    <button class="project_toggle" type="button" data-collapse="data-collapse" aria-expanded="false" aria-controls="desc-coach">Description<span class="project_caret">▾</span></button>
+                  </div>
+                </div>
+                <div class="project_desc" id="desc-coach" hidden="hidden">An application for finding sports coaches and sending them requests. A Vue 3 single-page app with Vue Router for navigation and Vuex for state, talking to a small Express and MongoDB API: coach listings with filtering, registration as a coach, request forms and authentication.</div>
+              </div>
+            </div>
+          </section>
+          <section class="cta" id="contact">
+            <div>
+              <div class="cta_title">Open to front-end roles.</div>
+              <div class="cta_meta">yurichubwork@gmail.com · +38 099 089 57 67</div>
+            </div><a class="btn" href="mailto:yurichubwork@gmail.com">Get in touch</a>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
