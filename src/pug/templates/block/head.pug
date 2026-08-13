@@ -2,12 +2,60 @@ head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0")
-    meta(name="description" content="Front-end developer: websites, web interfaces, web animations, responsive markup.")
+    meta(name="description" content=SITE_DESC)
     meta(name="keywords" content="front-end developer, HTML, CSS, JavaScript, TypeScript, Vue, Laravel")
+    meta(name="author" content="Yury Chub")
     link(rel="icon" type="image/png" sizes="192x192" href="@img/favicon.png")
+    link(rel="canonical" href=SITE_URL)
     block title
-    //- Тема ставится до первой отрисовки: основной бандл грузится с defer,
-    //- поэтому без этого была бы вспышка чужой темы.
+
+    //- Link previews in LinkedIn, Telegram, Slack. og:image is a dedicated
+    //- 1200x630 file — the sidebar portrait is too small for this.
+    meta(property="og:type" content="profile")
+    meta(property="og:site_name" content="Yury Chub")
+    meta(property="og:title" content=SITE_TITLE)
+    meta(property="og:description" content=SITE_DESC)
+    meta(property="og:url" content=SITE_URL)
+    meta(property="og:locale" content="en_US")
+    meta(property="og:image" content=SITE_URL + 'img/og-image.jpg')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(property="og:image:type" content="image/jpeg")
+    meta(property="og:image:alt" content="Yury Chub, Front-End Developer")
+    meta(property="profile:first_name" content="Yury")
+    meta(property="profile:last_name" content="Chub")
+
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content=SITE_TITLE)
+    meta(name="twitter:description" content=SITE_DESC)
+    meta(name="twitter:image" content=SITE_URL + 'img/og-image.jpg')
+    meta(name="twitter:image:alt" content="Yury Chub, Front-End Developer")
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yury Chub",
+        "jobTitle": "Front-End Developer",
+        "description": "#{SITE_DESC}",
+        "url": "#{SITE_URL}",
+        "image": "#{SITE_URL}img/og-image.jpg",
+        "email": "mailto:yurichubwork@gmail.com",
+        "telephone": "+380990895767",
+        "knowsAbout": ["HTML", "CSS", "Sass", "Tailwind CSS", "JavaScript", "TypeScript", "Vue.js", "PHP", "Laravel", "Python", "Django", "Node.js", "Docker", "Git"],
+        "knowsLanguage": [
+          { "@type": "Language", "name": "Ukrainian" },
+          { "@type": "Language", "name": "Russian" },
+          { "@type": "Language", "name": "English" }
+        ],
+        "sameAs": [
+          "https://github.com/ChubYury",
+          "https://gitlab.com/ChubYury",
+          "https://www.linkedin.com/in/yurii-chub-21010b337/"
+        ]
+      }
+    //- The theme is applied before the first paint: the main bundle is deferred,
+    //- so without this there would be a flash of the wrong theme.
     script.
       (function () {
         var root = document.documentElement, saved = null;

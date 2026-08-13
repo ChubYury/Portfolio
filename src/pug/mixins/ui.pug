@@ -1,3 +1,10 @@
+//- Social networks and schema.org need absolute URLs — they do not resolve
+//- relative ones. The address and the copy live here because head, title and
+//- the share button all need them: moving to a custom domain is a one-line edit.
+- var SITE_URL = 'https://chubyury.github.io/Portfolio/'
+- var SITE_TITLE = 'Yury Chub — Front-End Developer'
+- var SITE_DESC = 'Front-end developer: websites, web interfaces, web animations, responsive markup.'
+
 //- Navigation list. It is rendered twice — in the header and in the burger
 //- menu — so the items live here to keep the two lists from drifting apart.
 - var NAV_LINKS = [{href: '#about', label: 'About'}, {href: '#skills', label: 'Skills'}, {href: '#projects', label: 'Projects'}, {href: '#experience', label: 'Experience'}, {href: '#contact', label: 'Contacts'}]
