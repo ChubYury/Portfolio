@@ -20,7 +20,9 @@ img
 picture
   display: contents
 
-[hidden]
+// .menu is exempt: display cannot be transitioned, and it fades in and out
+// instead. It hides itself with visibility, see menu.sass.
+[hidden]:not(.menu)
   display: none !important
 
 [id]

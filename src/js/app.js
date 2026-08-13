@@ -3,6 +3,7 @@ import { initTheme } from "./modules/theme.js";
 import { initMenu } from "./modules/menu.js";
 import { initCollapse } from "./modules/collapse.js";
 import { initShare } from "./modules/share.js";
+import { initNavActive } from "./modules/navActive.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   flsFunctions.isWebp();
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initCollapse();
   initShare();
+  initNavActive();
 })
