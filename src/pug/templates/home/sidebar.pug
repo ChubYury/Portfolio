@@ -24,4 +24,15 @@ aside.side
     +contact('telega', 'Telegram', 't.me/+380990895767', 'https://t.me/+380990895767')
     +contact('ldin', 'LinkedIn', 'linkedin.com/in/yurii-chub', 'https://www.linkedin.com/in/yurii-chub-21010b337/')
     +contact('phone', 'Phone', '+38 099 089 57 67', 'tel:+380990895767')
-  a.btn.side_resume(href="files/resume_Yuri_Chub.pdf" download) Download Resume
+  .side_actions
+    a.btn.side_resume(href="files/resume_Yuri_Chub.pdf" download) Download Resume
+    //- Share URLs are built in share.js from canonical: they cannot be inlined
+    //- in the markup, and location.href would give localhost on a local build.
+    .share
+      button.share_btn(type="button" data-share aria-expanded="false" aria-controls="share-menu" aria-label="Share this page" title="Share this page")
+        img.icon(src="./images/icons/icons.svg#share" alt="")
+      .share_menu#share-menu(hidden)
+        button.share_item(type="button" data-share-copy) Copy link
+        a.share_item(data-share-net="telegram" href="#" target="_blank" rel="noopener") Telegram
+        a.share_item(data-share-net="linkedin" href="#" target="_blank" rel="noopener") LinkedIn
+        a.share_item(data-share-net="email" href="#") E-mail
