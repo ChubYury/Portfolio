@@ -13,9 +13,9 @@ export const html = () => {
         )
         // .pipe(fileInclude())
         .pipe(pug({
-            // Сжатие HTML файла
+            // Keep the HTML readable instead of collapsing it onto one line
             pretty: true,
-            // Показывает в терминале какой файл обработан
+            // Print the processed file name to the terminal
             verbose: true
         }))
         .pipe(app.plugins.replace(/@img\//g, 'img/'))

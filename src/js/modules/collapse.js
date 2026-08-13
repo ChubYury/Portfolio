@@ -1,5 +1,5 @@
-/* Раскрытие описаний проектов. Панель находится по aria-controls,
-   поэтому разметку карточки можно менять не трогая этот код. */
+/* Expandable project descriptions. The panel is looked up by aria-controls,
+   so the card markup can change without touching this code. */
 
 export function initCollapse() {
   document.addEventListener('click', (e) => {

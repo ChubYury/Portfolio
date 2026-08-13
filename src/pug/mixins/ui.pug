@@ -1,9 +1,9 @@
-//- Список навигации. Рендерится дважды: в шапке и в бургер-меню,
-//- поэтому пункты живут здесь, чтобы два списка не разъезжались.
+//- Navigation list. It is rendered twice — in the header and in the burger
+//- menu — so the items live here to keep the two lists from drifting apart.
 - var NAV_LINKS = [{href: '#about', label: 'About'}, {href: '#skills', label: 'Skills'}, {href: '#projects', label: 'Projects'}, {href: '#experience', label: 'Experience'}, {href: '#contact', label: 'Contacts'}]
 
-//- Параметр нельзя назвать block: внутри миксина это имя занято
-//- содержимым самого миксина.
+//- The parameter cannot be named block: inside a mixin that name is taken
+//- by the mixin's own content.
 mixin navLinks(name)
   each item, i in NAV_LINKS
     a(href=item.href class=`${name}_link` class=(i === 0 ? `${name}_link--active` : null))= item.label
@@ -43,8 +43,8 @@ mixin projectLink(href, label, muted)
 mixin projectLabel(text)
   span.project_label= text
 
-//- id нужен для aria-controls: панель описания ищется по нему,
-//- а не обходом DOM от кнопки вверх.
+//- The id is needed for aria-controls: the description panel is found by it,
+//- not by walking the DOM up from the button.
 mixin project(id, title, stack)
   .project
     .project_row

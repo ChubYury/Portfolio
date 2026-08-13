@@ -1,6 +1,6 @@
-/* Переключение тёмной и светлой темы.
-   Первичная установка data-theme делается инлайн-скриптом в head,
-   здесь только кнопки и реакция на смену системной темы. */
+/* Dark and light theme switching.
+   The initial data-theme is set by the inline script in head; this module
+   only handles the buttons and reacts to system theme changes. */
 
 const STORAGE_KEY = 'theme';
 
@@ -36,7 +36,7 @@ export function initTheme() {
     paint(btn.dataset.setTheme);
   });
 
-  // За системной темой следуем только пока пользователь не выбрал сам.
+  // Follow the system theme only until the user makes an explicit choice.
   const system = window.matchMedia('(prefers-color-scheme: light)');
   const onSystemChange = (e) => {
     if (readStored()) return;

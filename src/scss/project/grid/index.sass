@@ -15,8 +15,8 @@ body
   --container-width: 100%
   width: var(--container-width)
   margin: 0 auto
-  // Контейнер стал единственным потомком body, поэтому тянется сам
-  // и передаёт растяжение .page — без этого сайдбар не был бы во всю высоту.
+  // The container is body's only child, so it stretches itself and passes
+  // that stretch on to .page — otherwise the sidebar would not be full height.
   display: flex
   flex-direction: column
   flex: 1

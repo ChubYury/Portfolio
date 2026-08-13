@@ -1,6 +1,6 @@
 export let configFTP = {
-  host: '', // Адресс FTP сервера
-  user: '', // Имя пользователя
-  password: '', // Пароль
-  parallel: 5 // Кол-во одовременых потоков 
+  host: '', // FTP server address
+  user: '', // User name
+  password: '', // Password
+  parallel: 5 // Number of concurrent connections
 }

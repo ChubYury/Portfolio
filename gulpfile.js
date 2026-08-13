@@ -1,11 +1,11 @@
-// Основно модуль
+// Core module
 import gulp from "gulp";
-// Ипорт путей
+// Path config
 import { path } from "./gulp/config/path.js";
-// Импорт общих плагинов
+// Shared plugins
 import { plugins } from "./gulp/config/plugins.js";
 
-// Передаем значение в глобальную переменую
+// Expose the shared config as a global for the tasks
 global.app  = {
     isBuild: process.argv.includes('--build'),
     isDev: !process.argv.includes('--build'),
@@ -14,7 +14,7 @@ global.app  = {
     plugins: plugins
 }
 
-// Импорт задач
+// Tasks
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { server } from "./gulp/tasks/server.js";
@@ -27,10 +27,10 @@ import { svgSprive } from "./gulp/tasks/svgSprive.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
-// Наблюдатель за изменениями в файлах 
+// Watches the source files for changes
 function watcher() {
     gulp.watch(path.watch.files, copy);
-    // При автоматической загрузке на сервер
+    // For automatic upload to the server
     // gulp.watch(path.watch.html, gulp.siries(html, ftp));
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
@@ -40,23 +40,23 @@ function watcher() {
 
 // export { svgSprive }
 
-// Обрабока шрифтов 
+// Font processing
 const fonts = gulp.series(svgSprive, otfToTtf, ttfToWoff, fontsSttyle);
 
-// Основные задачи
+// Main tasks
 const mainTasks = gulp.series(fonts, gulp.parallel(html, copy, scss, js, images));
 
-// Построение сценариев выполнения задач
+// Task run scenarios
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 
-// Экспорт сценариев
+// Scenario exports
 export { dev }
 export { build }
 export { deployZIP }
 export { deployFTP }
 
-// Выполнение задач по умолчанию
+// Default task
 gulp.task('default', dev); 

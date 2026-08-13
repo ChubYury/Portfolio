@@ -1,5 +1,5 @@
-/* Бургер-меню. Ширина 992px совпадает с брейкпоинтом lg,
-   на котором меню скрывается и появляются обычные ссылки. */
+/* Burger menu. The 992px width matches the lg breakpoint, where the
+   menu is hidden and the inline nav links take over. */
 
 const DESKTOP = '(min-width: 992px)';
 

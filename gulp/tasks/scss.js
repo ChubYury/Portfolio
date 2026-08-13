@@ -45,7 +45,7 @@ export const scss = () => {
                 })
             )
         )
-        // Раскоментировать если нужен не сжатый файл стилей
+        // In dev the expanded stylesheet is written out as well
         .pipe(
             app.plugins.if(
                 app.isDev,
