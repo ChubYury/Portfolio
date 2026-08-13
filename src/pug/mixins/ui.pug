@@ -52,7 +52,7 @@ mixin projectLabel(text)
 
 //- The id is needed for aria-controls: the description panel is found by it,
 //- not by walking the DOM up from the button.
-mixin project(id, title, stack)
+mixin project(id, title, stack, desc)
   .project
     .project_row
       div
@@ -64,5 +64,4 @@ mixin project(id, title, stack)
         button.project_toggle(type="button" data-collapse aria-expanded="false" aria-controls=`desc-${id}`)
           | Description
           span.project_caret ▾
-    .project_desc(id=`desc-${id}` hidden)
-      | Project description goes here: the task, the role, notable markup or layout decisions, and the result.
+    .project_desc(id=`desc-${id}` hidden)= desc

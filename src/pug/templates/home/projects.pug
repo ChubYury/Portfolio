@@ -3,29 +3,29 @@ section#projects.section
 
   .projects_group-title Commercial
   .projects_group
-    +project('renoptik', 'Renoptik CMS', 'Laravel, Inertia, Vue 3, TypeScript, Tailwind, PostgreSQL, Docker')
-      +projectLink('https://renoptik.se/', 'Sites')
+    +project('renoptik', 'Renoptik CMS', 'Laravel, Inertia, Vue 3, TypeScript, Tailwind, PostgreSQL, Docker', 'E-commerce platform for a Swedish optics retailer. The storefront runs on Inertia and Vue 3 with server-side rendering for search visibility: catalog and product pages, a lens ordering flow, cart, favourites and customer profiles. The frontend is split into shop and admin domains that share typed composables for cart, search and translations, and the same codebase serves a custom admin panel for content, media and lens pricing.')
+      +projectLink('https://renoptik.fsm.lv/', 'Sites')
       +projectLabel('Private repository')
-    +project('tripbox', 'TripBox', 'Django, Python, JavaScript, Sass, PostgreSQL, Docker')
+    +project('tripbox', 'TripBox', 'Django, Python, JavaScript, Sass, PostgreSQL, Docker', 'Car rental marketplace operating in Georgia. My work is concentrated on the frontend of the public site and the partner cabinet: fleet and booking screens, host onboarding, personal host websites, blog and SEO pages. Django templates are paired with Sass and vanilla JavaScript, backed by PostgreSQL, Redis job queues, an AI assistant, GPS tracking and a Telegram bot, deployed with Docker behind Nginx.')
       +projectLink('https://tripbox.ge/', 'Sites')
       +projectLabel('Private repository')
-    +project('marvli', 'Marvli Wallet', 'Laravel, Inertia, Vue 3, Tailwind, shadcn-vue, MariaDB, Docker')
-      +projectLink('https://cabinet.marvli.com/', 'Sites')
+    +project('marvli', 'Marvli Wallet', 'Laravel, Inertia, Vue 3, Tailwind, shadcn-vue, MariaDB, Docker', 'Multi-currency wallet cabinet for a fintech product. The client area is built on Inertia and Vue 3 with Tailwind and shadcn-vue components: accounts and balances, transfers, counterparties and beneficiaries, plus KYC verification and business questionnaires. Administration runs on a Filament back office with activity logging, and the application is served through Laravel Octane with Reverb for real-time updates.')
+      +projectLink('https://stage.marvli.com', 'Sites')
       +projectLabel('Private repository')
 
   .projects_group-title Tools
   .projects_group
-    +project('b uilder', 'Builder', 'Js, Gulp')
+    +project('builder', 'Builder', 'Js, Gulp', 'My own Gulp starter for static sites, and the build this portfolio itself runs on. It compiles Pug and Sass, assembles SVG sprites, optimises images, generates web fonts from TTF, groups media queries and stamps assets with version numbers for cache busting.')
       +projectLink('https://github.com/ChubYury/templateGulp', 'Repository', true)
-    +project('llmlab', 'LLM Lab', 'LLM agents, MCP, prompt engineering')
+    +project('llmlab', 'LLM Lab', 'LLM agents, MCP, prompt engineering', 'A personal laboratory for researching and building LLM skills and agents. It holds a library of reusable skills and agent definitions, MCP integrations and a fixed experiment protocol — hypothesis, method, result, conclusions — along with orchestration setups written for the Marvli, Renoptik and TripBox projects.')
       +projectLabel('Private repository')
 
   .projects_group-title Pets
   .projects_group
-    +project('stationery', 'Stationery shop', 'HTML5, CSS3, Sass')
+    +project('stationery', 'Stationery shop', 'HTML5, CSS3, Sass', 'A multi-page stationery store layout: twelve product pages, a catalog and a cart. Built from Pug templates with BEM naming and Sass, it was an exercise in keeping markup and styles consistent across many near-identical pages without duplicating code.')
       +projectLink('https://chubyury.github.io/stationery/', 'Sites')
       +projectLink('https://github.com/ChubYury/stationery/tree/dev', 'Repository', true)
-    +project('coach', 'Coach app', 'HTML5, CSS3, Vue, Express, MongoDB')
+    +project('coach', 'Coach app', 'HTML5, CSS3, Vue, Express, MongoDB', 'An application for finding sports coaches and sending them requests. A Vue 3 single-page app with Vue Router for navigation and Vuex for state, talking to a small Express and MongoDB API: coach listings with filtering, registration as a coach, request forms and authentication.')
       +projectLink('https://vlp-umber.vercel.app/coaches', 'Sites')
       +projectLink('https://github.com/ChubYury/VLP', 'Repository Vue', true)
       +projectLink('https://github.com/ChubYury/vueServer', 'Repository Express', true)
