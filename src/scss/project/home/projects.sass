@@ -1,0 +1,71 @@
+.projects
+  &_
+    &group
+      display: flex
+      flex-direction: column
+      gap: 10px
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+    &group-title
+      margin-bottom: 12px
+      color: var(--muted)
+      font: 500 11px/1 var(--font-mono)
+      letter-spacing: .1em
+      text-transform: uppercase
+
+.project
+  border: 1px solid var(--border)
+  border-radius: var(--radius-card)
+  background: var(--panel)
+  &_
+    &row
+      display: grid
+      grid-template-columns: 1fr
+      align-items: start
+      gap: 12px
+      padding: 16px
+    &title
+      font: 500 17px/1.2 var(--font-sans)
+    &stack
+      margin-top: 5px
+      color: var(--muted)
+      font: 400 12px/1.4 var(--font-mono)
+    &actions
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 14px
+      font: 400 12px var(--font-mono)
+    &link
+      color: var(--accent)
+      &--
+        &muted
+          color: var(--muted)
+    &label
+      color: var(--muted)
+    &toggle
+      display: inline-flex
+      align-items: center
+      gap: 7px
+      padding: 8px 13px
+      border: 1px solid var(--border)
+      border-radius: 999px
+      background: transparent
+      color: var(--muted)
+      font: 500 11px/1 var(--font-mono)
+      cursor: pointer
+      &[aria-expanded="true"]
+        .project_caret
+          transform: rotate(180deg)
+    &caret
+      display: inline-block
+      transition: transform .18s ease
+    &desc
+      margin: 0 16px 16px
+      padding-top: 14px
+      max-width: 78ch
+      border-top: 1px solid var(--border)
+      color: var(--muted)
+      font: 400 14px/1.65 var(--font-sans)
+      text-wrap: pretty

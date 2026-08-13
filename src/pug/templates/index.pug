@@ -1,9 +1,18 @@
 extends ./base/template
 
 block title
-  title=  "My portfolio"
-    
+  title=  "Yury Chub — Front-End Developer"
+
+block header
+  include block/header
+
 block main
-  main.page 
-    include home/main-block
-        
+  main.page.layout
+    include home/sidebar
+    .layout_content
+      include home/about
+      include home/skills
+      include home/languages
+      include home/education
+      include home/projects
+      include home/cta

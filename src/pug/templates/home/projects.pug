@@ -1,0 +1,31 @@
+section#projects.section
+  +sectionHead('Projects')
+
+  .projects_group-title Commercial
+  .projects_group
+    +project('renoptik', 'Renoptik CMS', 'Laravel, Inertia, Vue 3, TypeScript, Tailwind, PostgreSQL, Docker')
+      +projectLink('https://renoptik.se/', 'Sites')
+      +projectLabel('Private repository')
+    +project('tripbox', 'TripBox', 'Django, Python, JavaScript, Sass, PostgreSQL, Docker')
+      +projectLink('https://tripbox.ge/', 'Sites')
+      +projectLabel('Private repository')
+    +project('marvli', 'Marvli Wallet', 'Laravel, Inertia, Vue 3, Tailwind, shadcn-vue, MariaDB, Docker')
+      +projectLink('https://cabinet.marvli.com/', 'Sites')
+      +projectLabel('Private repository')
+
+  .projects_group-title Tools
+  .projects_group
+    +project('b uilder', 'Builder', 'Js, Gulp')
+      +projectLink('https://github.com/ChubYury/templateGulp', 'Repository', true)
+    +project('llmlab', 'LLM Lab', 'LLM agents, MCP, prompt engineering')
+      +projectLabel('Private repository')
+
+  .projects_group-title Pets
+  .projects_group
+    +project('stationery', 'Stationery shop', 'HTML5, CSS3, Sass')
+      +projectLink('https://chubyury.github.io/stationery/', 'Sites')
+      +projectLink('https://github.com/ChubYury/stationery/tree/dev', 'Repository', true)
+    +project('coach', 'Coach app', 'HTML5, CSS3, Vue, Express, MongoDB')
+      +projectLink('https://vlp-umber.vercel.app/coaches', 'Sites')
+      +projectLink('https://github.com/ChubYury/VLP', 'Repository Vue', true)
+      +projectLink('https://github.com/ChubYury/vueServer', 'Repository Express', true)

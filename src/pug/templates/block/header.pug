@@ -1,0 +1,13 @@
+header.header
+  .nav
+    .nav_links
+      +navLinks('nav')
+    button.burger(type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Menu")
+      span.burger_bar
+      span.burger_bar
+      span.burger_bar
+    .nav_theme
+      button.nav_theme-btn(type="button" data-set-theme="dark" aria-pressed="true" aria-label="Dark theme" title="Dark theme") ●
+      button.nav_theme-btn(type="button" data-set-theme="light" aria-pressed="false" aria-label="Light theme" title="Light theme") ⭘
+  nav#menu.menu(hidden)
+    +navLinks('menu')

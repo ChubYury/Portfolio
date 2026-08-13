@@ -1,0 +1,35 @@
+.contacts
+  display: grid
+  grid-template-columns: 1fr
+  gap: 4px
+  padding-top: 18px
+  border-top: 1px solid var(--border)
+  &_
+    &item
+      display: grid
+      grid-template-columns: 34px 1fr
+      align-items: center
+      gap: 10px
+      padding: 8px 6px
+      border-radius: var(--radius-btn)
+      color: var(--text)
+      text-decoration: none
+      &:hover
+        background: var(--chip)
+        opacity: 1
+    &icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 34px
+      height: 34px
+      border-radius: var(--radius-btn)
+      background: var(--chip)
+    &label
+      display: block
+      font: 500 13px/1.2 var(--font-sans)
+    &value
+      display: block
+      color: var(--muted)
+      font: 400 11px/1.4 var(--font-mono)
+      overflow-wrap: anywhere

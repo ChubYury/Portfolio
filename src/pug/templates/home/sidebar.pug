@@ -1,0 +1,26 @@
+aside.side
+  .side_ident
+    img.side_photo(src="@img/my-photo.jpg" alt="Yury Chub" width="288" height="210")
+    div
+      .side_name Yury Chub
+      .side_role Front-End Developer
+  .side_chips
+    +chip('HTML5')
+    +chip('CSS3 / Sass')
+    +chip('Tailwind')
+    +chip('JavaScript')
+    +chip('TypeScript')
+    +chip('Vue 3')
+    +chip('PHP / Laravel')
+    +chip('Python / Django')
+    +chip('Node.js')
+    +chip('SQL / NoSQL')
+    +chip('Docker')
+    +chip('GIT')
+  .contacts
+    +contact('email', 'E-mail', 'yurichubwork@gmail.com', 'mailto:yurichubwork@gmail.com')
+    +contact('git', 'GitHub', 'github.com/ChubYury', 'https://github.com/ChubYury')
+    +contact('telega', 'Telegram', 't.me/+380990895767', 'https://t.me/+380990895767')
+    +contact('ldin', 'LinkedIn', 'linkedin.com/in/yurii-chub', 'https://www.linkedin.com/in/yurii-chub-21010b337/')
+    +contact('phone', 'Phone', '+38 099 089 57 67', 'tel:+380990895767')
+  a.btn.side_resume(href="files/resume_Yuri_Chub.pdf" download) Download Resume
