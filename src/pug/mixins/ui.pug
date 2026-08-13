@@ -1,0 +1,61 @@
+//- Список навигации. Рендерится дважды: в шапке и в бургер-меню,
+//- поэтому пункты живут здесь, чтобы два списка не разъезжались.
+- var NAV_LINKS = [{href: '#about', label: 'About'}, {href: '#skills', label: 'Skills'}, {href: '#projects', label: 'Projects'}, {href: '#experience', label: 'Experience'}, {href: '#contact', label: 'Contacts'}]
+
+//- Параметр нельзя назвать block: внутри миксина это имя занято
+//- содержимым самого миксина.
+mixin navLinks(name)
+  each item, i in NAV_LINKS
+    a(href=item.href class=`${name}_link` class=(i === 0 ? `${name}_link--active` : null))= item.label
+
+mixin chip(label)
+  span.side_chip= label
+
+mixin contact(icon, label, value, href)
+  a.contacts_item(href=href)
+    span.contacts_icon
+      img.icon(src="./images/icons/icons.svg#" + icon alt="")
+    span
+      span.contacts_label= label
+      span.contacts_value= value
+
+mixin sectionHead(title)
+  .section_head
+    h2.section_title= title
+    span.section_dash
+
+mixin card(title, meta)
+  .card
+    .card_title= title
+    if meta
+      .card_meta= meta
+
+mixin eduCard(period, title, role)
+  .card.card--edu
+    .card_period= period
+    .card_title= title
+    if role
+      .card_meta= role
+
+mixin projectLink(href, label, muted)
+  a.project_link(href=href class=muted ? 'project_link--muted' : null)= label + ' ↗'
+
+mixin projectLabel(text)
+  span.project_label= text
+
+//- id нужен для aria-controls: панель описания ищется по нему,
+//- а не обходом DOM от кнопки вверх.
+mixin project(id, title, stack)
+  .project
+    .project_row
+      div
+        .project_title= title
+        .project_stack= stack
+      .project_actions
+        if block
+          block
+        button.project_toggle(type="button" data-collapse aria-expanded="false" aria-controls=`desc-${id}`)
+          | Description
+          span.project_caret ▾
+    .project_desc(id=`desc-${id}` hidden)
+      | Project description goes here: the task, the role, notable markup or layout decisions, and the result.

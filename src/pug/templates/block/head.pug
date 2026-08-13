@@ -2,11 +2,20 @@ head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0")
-    meta(name="description" content="Free Web tutorials")
-    meta(name="keywords" content="HTML, CSS, JavaScript, Vue")
-    //- color the address bar
-    //- meta(name="theme-color" content="#8F67A4")
+    meta(name="description" content="Front-end developer: websites, web interfaces, web animations, responsive markup.")
+    meta(name="keywords" content="front-end developer, HTML, CSS, JavaScript, TypeScript, Vue, Laravel")
     link(rel="icon" type="image/png" sizes="192x192" href="@img/favicon.png")
     block title
+    //- Тема ставится до первой отрисовки: основной бандл грузится с defer,
+    //- поэтому без этого была бы вспышка чужой темы.
+    script.
+      (function () {
+        var root = document.documentElement, saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved !== 'light' && saved !== 'dark') {
+          saved = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        root.setAttribute('data-theme', saved);
+      })();
     link(rel="stylesheet" type="text/css" media="all" href='./css/style.min.css')
     script(type="text/javascript", src='./js/app.min.js' defer)
