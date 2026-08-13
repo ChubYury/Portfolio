@@ -40,8 +40,20 @@
       border-radius: 999px
       background: transparent
       color: var(--muted)
-      font: 500 12px/1 var(--font-mono)
+      // The mono font does not cover these glyphs. The stack is spelled out
+      // instead of using system-ui: otherwise the moon and the sun come from
+      // different fallback fonts and differ in size and vertical seating.
+      font: 500 15px/1 "Segoe UI Symbol", "Apple Symbols", "DejaVu Sans", "Noto Sans Symbols", sans-serif
       cursor: pointer
+      &::before
+        display: block
+        // The glyph's ink sits above the middle of the line box, and flex centers
+        // the box rather than the character itself — hence the nudge.
+        transform: translateY(.5px)
       &[aria-pressed="true"]
         background: var(--accent)
         color: var(--on-accent)
+      &[data-set-theme="dark"]::before
+        content: "\263e"
+      &[data-set-theme="light"]::before
+        content: "\263c"

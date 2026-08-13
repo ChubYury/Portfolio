@@ -7,7 +7,9 @@ header.header
       span.burger_bar
       span.burger_bar
     .nav_theme
-      button.nav_theme-btn(type="button" data-set-theme="dark" aria-pressed="true" aria-label="Dark theme" title="Dark theme") ●
-      button.nav_theme-btn(type="button" data-set-theme="light" aria-pressed="false" aria-label="Light theme" title="Light theme") ⭘
+      //- The ☾/☼ glyphs are drawn by CSS (nav.sass) and the buttons stay empty:
+      //- a screen reader announces the aria-label, not the character.
+      button.nav_theme-btn(type="button" data-set-theme="dark" aria-pressed="true" aria-label="Dark theme" title="Dark theme")
+      button.nav_theme-btn(type="button" data-set-theme="light" aria-pressed="false" aria-label="Light theme" title="Light theme")
   nav#menu.menu(hidden)
     +navLinks('menu')
