@@ -1,26 +1,56 @@
 .container
   --container-width: var(--mq-size-lg)
 
-  .portfolio
-    flex-direction: row-reverse
-    &_
-      &info
-        // max-width: 624px
-        padding: 104px 50px  100px 90px
-      // &skills
-      //   width: 370px
-      &download
-        top: 660px
-        font-size: 22px
-  
-  .portfolio-photo
-    &_
-      &wrap
-        width: 370px
-        height: 354px
-        left: -370px
+:root
+  --gutter: 32px
 
-  .contact
-    width: 290px
-    margin-top: 446px
-      
+.layout
+  display: grid
+  grid-template-columns: var(--sidebar) minmax(0, 1fr)
+
+.nav
+  padding: 16px var(--gutter)
+  &_
+    &links
+      display: flex
+
+.burger
+  display: none
+
+.menu
+  display: none
+
+.side
+  border-bottom: 0
+  border-right: 1px solid var(--border)
+  &_
+    &ident
+      flex-direction: column
+      align-items: stretch
+      gap: 22px
+    &photo
+      width: 100%
+      height: 210px
+      border-radius: var(--radius-card)
+
+.contacts
+  grid-template-columns: 1fr
+  &_
+    &item
+      &:last-child
+        grid-column: auto
+
+.section
+  &--
+    &top
+      padding-top: 34px
+
+.about
+  &_
+    &title
+      font-size: 40px
+
+.cards
+  &--
+    &3
+      grid-template-columns: repeat(3, 1fr)

@@ -1,49 +1,48 @@
 .container
   --container-width: var(--mq-size-md)
 
-  .portfolio
-    flex-direction: row-reverse
-    justify-content: center
-    &_
-      &info
-        // max-width: 576px
-        padding: 40px 20px  40px 40px
-      &download
-        top: 570px
-        left: -38%
-        font-size: 20px
-      &skills
-        padding: 0 40px
-        flex-direction: column
-        justify-content: start
-      &title
-        text-align: left
-      &subtitle
-        margin: 0 0 18px 0
-        text-align: left
-      &description
-        margin-bottom: 62px
-      // &skills
-        // width: 300px
-        // height: 100%
+:root
+  --gutter: 24px
 
+.nav
+  padding: 14px var(--gutter)
 
-  .portfolio-photo
-    &_
-      &wrap
-        width: 300px
-        height: 254px
-        position: absolute
-        top: 40px
-        left: -300px
-        margin: 0
-  
-  .projects
-    margin-bottom: 52px
-    
-  .contact
-    flex-direction: column
-    gap: 0
-    width: 220px
-    margin-top: 355px
-    text-align: left
+.side
+  padding: 26px 22px
+  &_
+    &photo
+      width: 132px
+      height: 132px
+
+.contacts
+  grid-template-columns: repeat(2, 1fr)
+  &_
+    &item
+      &:last-child
+        grid-column: 1 / -1
+
+.about
+  &_
+    &title
+      font-size: 34px
+
+.cards
+  grid-template-columns: repeat(2, 1fr)
+
+.project
+  &_
+    &row
+      grid-template-columns: 1fr auto
+      align-items: center
+      gap: 20px
+      padding: 18px 20px
+
+.cta
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  gap: 24px
+  padding: 30px 32px
+
+.btn
+  white-space: nowrap

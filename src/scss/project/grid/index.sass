@@ -3,7 +3,7 @@ body
   display: flex
   flex-direction: column
   min-height: 100vh
-  
+
 .not-scroll
   overflow: hidden
 
@@ -15,6 +15,17 @@ body
   --container-width: 100%
   width: var(--container-width)
   margin: 0 auto
+  // Контейнер стал единственным потомком body, поэтому тянется сам
+  // и передаёт растяжение .page — без этого сайдбар не был бы во всю высоту.
+  display: flex
+  flex-direction: column
+  flex: 1
+
+.layout
+  display: block
+  &_
+    &content
+      min-width: 0
 
 @media (min-width: 576px)
   @import sm
